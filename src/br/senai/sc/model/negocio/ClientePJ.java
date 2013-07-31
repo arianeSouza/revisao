@@ -14,15 +14,6 @@ public class ClientePJ extends PessoaJuridica {
     private int qtVezesComprou;
     private double vlTotalGasto;
 
-    public ClientePJ(double limite, int nrConta, char categoria, int qtVezesComprou, double vlTotalGasto, String cnpj, String razaoSocial, String nomeFantasia) {
-        super(cnpj, razaoSocial, nomeFantasia);
-        this.limite = limite;
-        this.nrConta = nrConta;
-        this.categoria = categoria;
-        this.qtVezesComprou = qtVezesComprou;
-        this.vlTotalGasto = vlTotalGasto;
-    }
-
     public double getLimite() {
         return limite;
     }
@@ -62,6 +53,16 @@ public class ClientePJ extends PessoaJuridica {
     public void setVlTotalGasto(double vlTotalGasto) {
         this.vlTotalGasto = vlTotalGasto;
     }
+
+    public ClientePJ(double limite, int nrConta, char categoria, int qtVezesComprou, double vlTotalGasto, String cnpj, String razaoSocial, String nomeFantasia, int id, String endereco, String telefone, String dataCadastro) {
+        super(cnpj, razaoSocial, nomeFantasia, id, endereco, telefone, dataCadastro);
+        this.limite = limite;
+        this.nrConta = nrConta;
+        this.categoria = categoria;
+        this.qtVezesComprou = qtVezesComprou;
+        this.vlTotalGasto = vlTotalGasto;
+    }
+    
     
     
 }
