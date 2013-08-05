@@ -25,10 +25,7 @@ public class Transportadora extends PessoaJuridica{
     
     private String tipoTransporte;
 
-    public Transportadora(String tipoTransporte, double precoFrete, String cnpj, String razaoSocial, String nomeFantasia, int id, String endereco, String telefone, String dataCadastro) {
-        super(cnpj, razaoSocial, nomeFantasia, id, endereco, telefone, dataCadastro);
-        this.tipoTransporte = tipoTransporte;
-        this.precoFrete = precoFrete;
+    public Transportadora(){
     }
     private double precoFrete;
     

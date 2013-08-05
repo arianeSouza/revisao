@@ -14,6 +14,9 @@ public class Funcionario extends PessoaFisica {
     private String ctps;
     private String cargo;
 
+    public Funcionario(){
+    }
+
     public double getSalario() {
         return salario;
     }
@@ -46,12 +49,6 @@ public class Funcionario extends PessoaFisica {
         this.cargo = cargo;
     }
 
-    public Funcionario(double salario, String dataAdmissao, String ctps, String cargo, String cpf, String nome, String rg, int id, String endereco, String telefone, String dataCadastro) {
-        super(cpf, nome, rg, id, endereco, telefone, dataCadastro);
-        this.salario = salario;
-        this.dataAdmissao = dataAdmissao;
-        this.ctps = ctps;
-        this.cargo = cargo;
-    }
+
     
 }

@@ -53,13 +53,7 @@ public class ClientePF extends PessoaFisica{
     }
     private double vlTotalGasto;
 
-    public ClientePF(double nrConta, double limiteCompra, char categoria, int qtVezesCompra, double vlTotalGasto, String cpf, String nome, String rg, int id, String endereco, String telefone, String dataCadastro) {
-        super(cpf, nome, rg, id, endereco, telefone, dataCadastro);
-        this.nrConta = nrConta;
-        this.limiteCompra = limiteCompra;
-        this.categoria = categoria;
-        this.qtVezesCompra = qtVezesCompra;
-        this.vlTotalGasto = vlTotalGasto;
+    public ClientePF(){
     }
     
     

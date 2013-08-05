@@ -17,9 +17,7 @@ public class Fornecedor extends PessoaJuridica{
         this.tipoProduto = tipoProduto;
     }
 
-    public Fornecedor(String tipoProduto, String cnpj, String razaoSocial, String nomeFantasia, int id, String endereco, String telefone, String dataCadastro) {
-        super(cnpj, razaoSocial, nomeFantasia, id, endereco, telefone, dataCadastro);
-        this.tipoProduto = tipoProduto;
+    public Fornecedor(){
     }
         
 }

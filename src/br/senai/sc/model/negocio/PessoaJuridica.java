@@ -7,11 +7,7 @@ package br.senai.sc.model.negocio;
  */
 public class PessoaJuridica extends Pessoa {
 
-    public PessoaJuridica(String cnpj, String razaoSocial, String nomeFantasia, int id, String endereco, String telefone, String dataCadastro) {
-        super(id, endereco, telefone, dataCadastro);
-        this.cnpj = cnpj;
-        this.razaoSocial = razaoSocial;
-        this.nomeFantasia = nomeFantasia;
+    public PessoaJuridica(){
     }
     
     private String cnpj;
