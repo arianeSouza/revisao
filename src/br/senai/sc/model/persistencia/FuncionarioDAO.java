@@ -31,6 +31,31 @@ public class FuncionarioDAO {
                     + "\nData da Admissão: " + f.getDataAdmissao() + "\nCtps " + f.getCtps() + "\nCargo: " + f.getCargo();
         }
         JOptionPane.showMessageDialog (null, msg);
+            }
+    public void excluir (String nome,
+        List<Funcionario>funcionario) {
+        Funcionario fRemove = null;
+        for (Funcionario f : funcionario) {
+            if (f.getNome().equals(nome)){
+                
+            }
+        
     }
+        funcionario.remove(fRemove);
+    }
+    public Funcionario buscaFuncionarioByNome(String nome, List<Funcionario> funcionario){
+         for(Funcionario fBusca : funcionario){
+            if(fBusca.getNome().equals(nome)){
+                return fBusca;
+            }
+        }
+         return null;
 
+     }
+    
+    public void altera(String nome, List<Funcionario> funcionario, Funcionario fAltera){
+        
+        excluir(nome, funcionario);
+        adicionar(fAltera, funcionario);
+    }
 }
