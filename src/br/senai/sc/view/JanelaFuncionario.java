@@ -52,4 +52,38 @@ public class JanelaFuncionario {
        FuncionarioDAO dao = new FuncionarioDAO();
        dao.listar(funcionario);
     }
+       private void removeFuncionario(List<Funcionario> funcionario) {
+       FuncionarioDAO dao = new FuncionarioDAO();
+       String nome = JOptionPane.showInputDialog("Informe o nome do funcionario a ser excluído");
+       dao.excluir(nome, funcionario);
+    }
+        private void alteraFuncionario(List<Funcionario> funcionario){
+        FuncionarioDAO dao = new FuncionarioDAO();
+        String nome = JOptionPane.showInputDialog("Informe o nome do funcionario a ser alterado");
+        Funcionario fAltera= new Funcionario();
+        
+        fAltera=dao.buscaFuncionarioByNome(nome, funcionario);
+              
+        if(fAltera!=null){
+                  
+        fAltera.setNome(JOptionPane.showInputDialog("Informe o nome: ", fAltera.getNome()));          
+        fAltera.setDataNscimento(JOptionPane.showInputDialog("Informe a data de Nascimento do Funcionário", fAltera.getDataNscimento()));
+        fAltera.setRg(JOptionPane.showInputDialog("Informe o rg do Funcionário", fAltera.getRg()));
+        fAltera.setCpf(JOptionPane.showInputDialog("Informe o cpf do Funcionário", fAltera.getCpf()));
+        fAltera.setEndereco(JOptionPane.showInputDialog("Informe o endereço do Funcionário", fAltera.getEndereco()));
+        fAltera.setTelefone(JOptionPane.showInputDialog("Informe o telefone do Funcionário", fAltera.getTelefone()));
+        fAltera.setDataCadastro(JOptionPane.showInputDialog("Informe a data do cadastro do Funcionário", fAltera.getDataCadastro()));
+        fAltera.setSalario(Double.parseDouble(JOptionPane.showInputDialog("Informe o salário do Funcionário", fAltera.getSalario())));
+        fAltera.setDataAdmissao(JOptionPane.showInputDialog("Informe a data da admissão do Funcionário", fAltera.getDataAdmissao()));
+        fAltera.setCtps(JOptionPane.showInputDialog("Informe o número da carteira de trabalho do Funcionário", fAltera.getCtps()));
+        fAltera.setCargo(JOptionPane.showInputDialog("Informe o cargo do Funcionário", fAltera.getCargo()));
+                
+        dao.altera(nome, funcionario, fAltera);
+        
+        }else{
+            JOptionPane.showMessageDialog(null,"Funcioanrio "+nome+" não existe ");
+        }
+            
+       }
+
 }
