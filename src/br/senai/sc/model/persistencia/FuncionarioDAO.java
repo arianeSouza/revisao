@@ -37,10 +37,9 @@ public class FuncionarioDAO {
         Funcionario fRemove = null;
         for (Funcionario f : funcionario) {
             if (f.getNome().equals(nome)){
-                
             }
-        
-    }
+   
+        }
         funcionario.remove(fRemove);
     }
     public Funcionario buscaFuncionarioByNome(String nome, List<Funcionario> funcionario){
