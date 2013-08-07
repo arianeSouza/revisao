@@ -35,10 +35,12 @@ public class JanelaPrincipal {
                 break;
             case 4:
                 break;
+            case 5:
+               break;
             default:
-               break;            
+                JOptionPane.showMessageDialog(null, "Operação inválida");
         }
-    }while(opcao!=0);
+    }while(opcao!=5);
     
 }
     
